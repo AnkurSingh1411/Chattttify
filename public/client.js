@@ -44,15 +44,8 @@ function appendMessage(msg, type) {
 socket.on('message', (msg) => {
     appendMessage(msg, 'incoming')
     scrollToBottom()
-    console.log(msg)
 })
 
 function scrollToBottom() {
     messageArea.scrollTop = messageArea.scrollHeight
 }
-
-// Recieving the messages
-socket.on('message',(msg)=>{
-    console.log(msg)
-    appendMessage(msg,'incoming')
-})
